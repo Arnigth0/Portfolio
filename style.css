@@ -1,0 +1,638 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+li, a{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.blacklight a{
+    color: #FFBA08;
+}
+
+nav{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    width: 100%;
+}
+
+.fixed_nav nav{
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+    width: 100%;
+    background: #271a50;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.fortfolio_text{
+    cursor: pointer;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #edf0f1;
+}
+
+.fortfolio_text_orange{
+    color: #FFBA08;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #FFBA08;
+}
+
+.home{
+    font-family: "Ubuntu", sans-serif; 
+    color: #edf0f1;
+    display: flex;
+    background-image: url('https://2.bp.blogspot.com/-YZm6RWrpYtI/XFYDSVh1fDI/AAAAAAAAB7A/ZLXWq4EPS1A0z1Vztm0yuemDyo7CuFoKACKgBGAs/w0/russain-blue-cat-24-4K.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.home .max-width{
+    margin: auto 0 auto 10%;
+}
+
+.home .max-width .text-1{
+    font-size: 27px;
+}
+
+.home .max-width .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .max-width .text-3{  
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.text-3 span{
+    color: #FFBA08;
+}
+
+section{
+    padding: 60px 0;
+}
+
+.about, .services, .skills, .my_teams, .contact, footer{
+    font-family: "poppins", sans-serif;
+}
+
+.about .max-width,
+.services .max-width,
+.my_teams .max-width,
+.skills .max-width,
+.contact .max-width{
+    padding: 20px 10%  
+}
+
+.about .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about .title::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+.about .title::after{
+    content: 'who i am';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    font-size: 20px;
+    color:#FFBA08;
+    padding: 5px;
+    background: #FFf;
+    transform: translateX(-50%);
+}
+
+.about .about-content,
+.services .services-content,
+.skills .skills-content,
+.contact .cont-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left img{
+    display: flex;
+    height: 350px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .right .text{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+    color: #FFBA08;
+}
+
+.about .about-content .right .text p{
+    text-align: justify;
+}
+
+.services,.my_teams{
+    background: #111;
+    color: #FFf;
+}
+
+
+.services .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.services .title::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.services .title::after{
+    content: 'what i provide';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    font-size: 20px;
+    color:#FFBA08;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+.services .services-content .card{
+    width:  calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.services .services-content .card:hover{
+    background: #FFBA08;
+}
+
+.services .services-content .card i{
+    font-size: 50px;
+    color: #FFBA08;
+    transition: color 1s ease;
+}
+
+.services .services-content .card:hover i{
+    color: #fff;
+}
+
+.services .services-content .card .text{
+    font-size: 22px;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 10px 0 7px 0;
+}
+
+.services .services-content .card p{
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.services .services-content .card .box{
+    transition: all 1s ease;
+}
+
+.services .services-content .card .box:hover{
+    transform: scale(1.05);
+}
+
+.skills .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.skills .title::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+.skills .title::after{
+    content: 'what i know';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    font-size: 20px;
+    color:#FFBA08;
+    background: #FFf;
+    transform: translateX(-50%);
+}
+
+.skills .skills-content .column{ 
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text{
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .left p{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #FFBA08;
+}
+
+.skills .skills-content .right .html::before{
+    width: 80%;
+}
+.skills .skills-content .right .css::before{
+    width: 53%;
+}
+.skills .skills-content .right .js::before{
+    width: 67%;
+}
+.skills .skills-content .right .bootstrap::before{
+    width: 70%;
+}
+
+.my_teams .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.my_teams .title::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.my_teams .title::after
+{
+    content: 'who with me';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    font-size: 20px;
+    color:#FFBA08;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+.my_teams .teams_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.my_teams .teams_content .card{
+    background: #222;
+    border-radius: 10px;
+    padding: 25px 35px;
+    margin: 10px;
+    transition: all 1s ease;
+}
+
+.my_teams .teams_content .card:hover{
+    background: #FFBA08;
+}
+
+.my_teams .teams_content .card .box{
+    width: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.my_teams .teams_content .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #FFBA08;
+    transition: all 1s ease;
+}
+
+.my_teams .teams_content .card:hover img{
+    border-color: #fff;
+}
+
+.my_teams .teams_content .card .box .text{
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.my_teams .teams_content .card .box p{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.contact .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact .title::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+.contact .title::after{
+    content: 'what i know';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    font-size: 20px;
+    color:#FFBA08;
+    background: #FFf;
+    transform: translateX(-50%);
+}
+
+.contact .cont-content .column{
+    width: calc(50% - 30px);
+}
+
+.contact .cont-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact .cont-content .left p{
+    text-align: justify;
+}
+
+.contact .cont-content .left .icons{
+    margin: 10px 0;
+}
+
+.contact .cont-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .cont-content .row .info{
+    margin-left: 30px;
+}
+
+.contact .cont-content .row i{
+    font-size: 25px;
+    color: #FFBA08;
+}
+.contact .cont-content .info .head{
+    font-weight: 500;
+}
+.contact .cont-content .info .sub-title{
+    color: #333;
+}
+
+.contact .right form .fields{
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact .right form .textarea{
+    height: 150px;
+    width: 100%;
+}
+
+.contact .right form .name{
+    margin-right: 10px;
+}
+
+.contact .right form .email{
+    margin-left: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+}
+
+.contact .right form .button button{
+    height: 100%;
+    width: 100%;
+    border: 2px solid #FFBA08;
+    background: #FFBA08;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.contact .right form .button button:hover{
+    color: #FFBA08;
+    background: none; 
+}
+
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+footer span a{
+    color: #FFBA08;
+    text-decoration: none;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}
+
+.typing{
+    position: relative;
+    margin-left: 10px;
+}
+
+.typing::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 45px;
+    border-right: 4px solid white;
+    animation: blink 0.5s infinite ease;
+}
+
+@keyframes blink{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; 
+    }
+}
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #FFBA08;
+    right: 10px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    color: #FFf;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.6s ease;
+}
+.show .scroll-up-btn{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
